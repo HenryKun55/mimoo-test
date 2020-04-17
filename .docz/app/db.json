@@ -1,0 +1,233 @@
+{
+  "config": {
+    "title": "Mimoo",
+    "description": "My awesome app using docz",
+    "menu": [],
+    "version": "0.1.0",
+    "repository": null,
+    "native": false,
+    "themeConfig": {},
+    "separator": "-",
+    "typescript": true
+  },
+  "entries": [
+    {
+      "key": "README.md",
+      "value": {
+        "id": "04c6e90faac2675aa89e2176d2eec7d8",
+        "filepath": "README.md",
+        "fullpath": "/home/henry/Documentos/WorkSpace/mimoo/README.md",
+        "link": "",
+        "hidden": false,
+        "slug": "readme",
+        "route": "/readme",
+        "name": "Readme",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "mimoo-test",
+            "depth": 1,
+            "value": "Mimoo Test"
+          },
+          {
+            "slug": "desafio",
+            "depth": 2,
+            "value": "Desafio"
+          }
+        ]
+      }
+    },
+    {
+      "key": "src/index.mdx",
+      "value": {
+        "name": "Getting Started",
+        "route": "/",
+        "id": "6576455a124f9aaefd860597f03a8fe4",
+        "filepath": "src/index.mdx",
+        "fullpath": "/home/henry/Documentos/WorkSpace/mimoo/src/index.mdx",
+        "link": "",
+        "hidden": false,
+        "slug": "src-index",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "getting-started",
+            "depth": 1,
+            "value": "Getting Started"
+          },
+          {
+            "slug": "consistency",
+            "depth": 2,
+            "value": "Consistency"
+          }
+        ]
+      }
+    },
+    {
+      "key": "src/components/Alert.mdx",
+      "value": {
+        "name": "Alert",
+        "menu": "Components",
+        "id": "411d2842c3d65e6ee7d3ec119ed4c5a0",
+        "filepath": "src/components/Alert.mdx",
+        "fullpath": "/home/henry/Documentos/WorkSpace/mimoo/src/components/Alert.mdx",
+        "link": "",
+        "hidden": false,
+        "slug": "src-components-alert",
+        "route": "/src-components-alert",
+        "headings": [
+          {
+            "slug": "alert",
+            "depth": 1,
+            "value": "Alert"
+          },
+          {
+            "slug": "properties",
+            "depth": 2,
+            "value": "Properties"
+          },
+          {
+            "slug": "basic-usage",
+            "depth": 2,
+            "value": "Basic usage"
+          },
+          {
+            "slug": "using-different-kinds",
+            "depth": 2,
+            "value": "Using different kinds"
+          }
+        ]
+      }
+    },
+    {
+      "key": "src/components/Button.mdx",
+      "value": {
+        "name": "Button",
+        "menu": "Components",
+        "id": "94c04b4e4bd29ffbdeec8755c1a4c04f",
+        "filepath": "src/components/Button.mdx",
+        "fullpath": "/home/henry/Documentos/WorkSpace/mimoo/src/components/Button.mdx",
+        "link": "",
+        "hidden": false,
+        "slug": "src-components-button",
+        "route": "/src-components-button",
+        "headings": [
+          {
+            "slug": "button",
+            "depth": 1,
+            "value": "Button"
+          },
+          {
+            "slug": "best-practices",
+            "depth": 3,
+            "value": "Best practices"
+          },
+          {
+            "slug": "properties",
+            "depth": 2,
+            "value": "Properties"
+          },
+          {
+            "slug": "basic-usage",
+            "depth": 2,
+            "value": "Basic usage"
+          },
+          {
+            "slug": "with-different-sizes",
+            "depth": 2,
+            "value": "With different sizes"
+          },
+          {
+            "slug": "with-different-colors",
+            "depth": 2,
+            "value": "With different colors"
+          },
+          {
+            "slug": "outlined",
+            "depth": 2,
+            "value": "Outlined"
+          }
+        ]
+      }
+    }
+  ],
+  "props": [
+    {
+      "key": "src/App.tsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "App",
+          "methods": [],
+          "props": {}
+        }
+      ]
+    },
+    {
+      "key": "src/index.tsx",
+      "value": []
+    },
+    {
+      "key": "src/components/Alert.tsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Alert",
+          "methods": [],
+          "props": {
+            "kind": {
+              "defaultValue": {
+                "value": "info"
+              },
+              "description": "Set this to change alert kind",
+              "name": "kind",
+              "required": true,
+              "type": {
+                "name": "\"info\" | \"positive\" | \"negative\" | \"warning\""
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/components/Button.tsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Button",
+          "methods": [],
+          "props": {
+            "scale": {
+              "defaultValue": null,
+              "description": "",
+              "name": "scale",
+              "required": true,
+              "type": {
+                "name": "\"small\" | \"normal\" | \"big\""
+              }
+            },
+            "kind": {
+              "defaultValue": null,
+              "description": "",
+              "name": "kind",
+              "required": true,
+              "type": {
+                "name": "\"primary\" | \"secondary\" | \"cancel\" | \"dark\" | \"gray\""
+              }
+            },
+            "outline": {
+              "defaultValue": null,
+              "description": "",
+              "name": "outline",
+              "required": true,
+              "type": {
+                "name": "boolean"
+              }
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
