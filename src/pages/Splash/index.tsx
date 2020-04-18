@@ -25,7 +25,7 @@ const Splash: React.FC = () => {
   return (
     <Container>
       <Logo src={logo} />
-      
+
       <Header>
         <Title>Bem vindo à <br />Mimmo!</Title>
         <Subtitle>Alegre. Divertido. Relevante. <br />Você vai adorar.</Subtitle>
