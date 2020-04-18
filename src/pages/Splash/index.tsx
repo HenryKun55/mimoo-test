@@ -1,12 +1,9 @@
 import React from 'react'
-
-import { useDispatch, useSelector } from 'react-redux'
-
-import * as AuthActions from '../../store/ducks/auth/actions';
-import * as ProductActions from '../../store/ducks/products/actions';
+import { useHistory } from 'react-router-dom'
 
 import {
   Container,
+  Header,
   Logo,
   Title,
   Subtitle,
@@ -15,23 +12,28 @@ import {
   StartButton,
 } from './styles'
 
-import { ApplicationState } from '../../store';
+import { logo, splash } from '../../assets'
 
 const Splash: React.FC = () => {
-  const dispatch = useDispatch()
-  const { products: { product } } = useSelector((state: ApplicationState) => state)
-  
-  const handleClick = () => {
-    // dispatch(AuthActions.storeRequest({ name: 'Alfredinho Rosa' }))
-    dispatch(ProductActions.getProductRequest('Sopa'))
+
+  const history = useHistory()
+
+  function handleStart() {
+    history.push('/login')
   }
 
   return (
     <Container>
-      <Title>Bem vindo à Mimmo</Title>
-      <Subtitle>Alegre. Divertido. Relevante. Você vai adorar {product?.name}!</Subtitle>
-      <Description>Nos conte um pouco sobre você e ganhe pontos</Description>
-      <StartButton onClick={handleClick}>Começar</StartButton>
+      <Logo src={logo} />
+      
+      <Header>
+        <Title>Bem vindo à <br />Mimmo!</Title>
+        <Subtitle>Alegre. Divertido. Relevante. <br />Você vai adorar.</Subtitle>
+        <Description>Nos conte um pouco sobre você e ganhe pontos</Description>
+      </Header>
+
+      <Image src={splash} alt='Splash'/>
+      <StartButton onClick={handleStart}>Começar</StartButton>
     </Container>
   )
 }
