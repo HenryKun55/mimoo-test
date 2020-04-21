@@ -5,7 +5,7 @@ import { IGetProducts, IGetProduct } from '../../../services/product.service';
  */
 
 export interface ProductState {
-  products: IGetProducts[];
+  data: IGetProducts[];
   product?: IGetProduct;
   loading: boolean;
 }

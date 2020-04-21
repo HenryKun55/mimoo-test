@@ -5,5 +5,7 @@ export default {
   grey: '#3A3A3A',
   greyLight: '#999999',
   greyLight2: '#949494',
-  brown: '#482F05'
+  brown: '#482F05',
+  cordepele: '#CEB5AB',
+  naoecordepele: '#ABC3CE',
 }

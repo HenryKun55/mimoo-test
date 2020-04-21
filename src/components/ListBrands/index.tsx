@@ -1,52 +1,51 @@
-import React, { useState } from 'react'
-import { AppBar, Typography, Box } from '@material-ui/core'
+import React from 'react'
 
-import { useStyles, Tabs, Tab, Container } from './styles'
+import Brand from '../../types/Brand'
+import Product from '../../types/Product'
+import {
+  Container,
+  BrandContainer,
+  ProductContainer,
+  Image,
+  TitleContainer,
+  Icon,
+  Title,
+} from './styles'
 
-interface TabPanelProps {
-  children?: React.ReactNode;
-  index: any;
-  value: any;
+import { colors } from '../../styles'
+
+export interface ListBrandProps {
+  background?: string;
+  data: Brand[];
 }
 
-function TabPanel(props: TabPanelProps) {
-  const { children, value, index } = props
+type Props = ListBrandProps
 
+const ListBrands: React.FC<Props> = ({ data, background, ...props }) => {
   return (
-    <Typography
-      component="div"
-      role="tabpanel"
-      hidden={value !== index}
-    >
-      {value === index && <Box p={2}>{children}</Box>}
-    </Typography>
-  )
-}
+    <Container>
+      {data.map((brand: Brand, keyBrand) => (
+        <BrandContainer key={keyBrand}>
+          <TitleContainer>
+            <Icon size={20} color={colors.greyLight} />
+            <Title>{brand.name}</Title>
+          </TitleContainer>
 
-export default function SimpleTabs({ ...props }) {
-  const classes = useStyles()
-  const [value, setValue] = useState(0)
-
-  const handleChange = (event: React.ChangeEvent<{}>, newValue: number) => {
-    setValue(newValue)
-  }
-
-  return (
-    <Container className={classes.root} {...props}>
-      <AppBar className={classes.appBar} position="static">
-        <Tabs value={value} onChange={handleChange} aria-label="simple tabs example">
-          <Tab label="Skin Care"/>
-          <Tab label="Snacks" />
-        </Tabs>
-      </AppBar>
-
-      <TabPanel value={value} index={0}>
-        Listando dados de skin care
-      </TabPanel>
-
-      <TabPanel value={value} index={1}>
-        Meus snacks
-      </TabPanel>
+          <ProductContainer>
+            {brand.products.map((product: Product, keyProduct) => (
+              <Image key={keyProduct} src={product.image} background={background} />
+            ))}
+            {brand.products.map((product: Product, keyProduct) => (
+              <Image key={keyProduct} src={product.image} background={background}/>
+            ))}
+            {brand.products.map((product: Product, keyProduct) => (
+              <Image key={keyProduct} src={product.image} background={background}/>
+            ))}
+          </ProductContainer>
+        </BrandContainer>
+      ))}
     </Container>
   )
 }
+
+export default ListBrands

@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { colors } from '../../styles'
 import { AiFillPlusCircle } from 'react-icons/ai'
-import { ListBrands as ListBrandsC } from '../../components'
+import { ListBrands as ListBrandsC, Tab as TabC } from '../../components'
 
 export const Container = styled.div`
   padding: 30px;
@@ -43,12 +43,23 @@ export const TextPointValue = styled.h3`
   margin-left: 20px;
 `
 
-export const PlusButton = styled(AiFillPlusCircle)`
-  position: absolute;
+export const PlusButton = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
   bottom: 30px;
   right: 30px;
+  background-color: ${colors.primary};
+  width: 68px;
+  height: 68px;
+  border-radius: 34px;
 `
 
 export const ListBrands = styled(ListBrandsC)`
+  padding: 0 30px;
+`
+
+export const Tab = styled(TabC)`
   padding: 0 30px;
 `
