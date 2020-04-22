@@ -13,6 +13,9 @@ export const getProductRequest = (barcode: string) =>
 
 export const getProductSuccess = (product: IGetProduct) =>
   action(ProductTypes.GET_PRODUCT_SUCCESS, { product })
+  
+export const setProductRequest = (product: IGetProduct | undefined) =>
+  action(ProductTypes.SET_PRODUCT_REQUEST, { product })
 
-export const cleanProduct = () =>
-  action(ProductTypes.CLEAN_PRODUCT)
+export const setProductSuccess = (product: IGetProduct) =>
+  action(ProductTypes.SET_PRODUCT_SUCCESS, { product })

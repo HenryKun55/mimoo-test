@@ -20,7 +20,7 @@ const Scan: React.FC = () => {
 
   useEffect(() => {
     if(product) {
-      history.push('/product')
+      history.push('/product/confirmation')
     }
   }, [loading, product])
 

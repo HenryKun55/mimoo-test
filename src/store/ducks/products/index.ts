@@ -19,8 +19,10 @@ const product: Reducer<ProductState> = (state = INITIAL_STATE, action) => {
       return { ...state, loading: true }
     case ProductTypes.GET_PRODUCT_SUCCESS:
       return { ...state, loading: false, product: action.payload.product }
-    case ProductTypes.CLEAN_PRODUCT:
-      return { ...state, product: undefined }
+    case ProductTypes.SET_PRODUCT_REQUEST:
+      return { ...state, loading: true }
+    case ProductTypes.SET_PRODUCT_SUCCESS:
+      return { ...state, loading: false, data: [...state.data, action.payload.product], product: undefined }
     default:
       return { ...state }
   }

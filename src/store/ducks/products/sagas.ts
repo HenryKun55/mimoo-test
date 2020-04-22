@@ -1,5 +1,5 @@
 import { call, put } from 'redux-saga/effects'
-import { getProductsSuccess, getProductSuccess, cleanProduct } from './actions'
+import { getProductsSuccess, getProductSuccess, setProductSuccess } from './actions'
 import * as ProductService from '../../../services/product.service'
 import { IGetProducts, IGetProduct } from '../../../services/product.service'
 import ApiError from '../../../types/ApiError'
@@ -17,6 +17,7 @@ export function* getProducts() {
 }
 
 export function* getProduct(payload: any) {
+  console.log(payload);
   const { barcode } = payload.payload;
   try {
     const product: IGetProduct = yield call(ProductService.getProduct, barcode)
@@ -29,6 +30,7 @@ export function* getProduct(payload: any) {
   }
 }
 
-export function* clean(){
-  yield put(cleanProduct())
+export function* setProduct(payload: any){
+  const { product } = payload.payload;
+  yield put(setProductSuccess(product))
 }

@@ -8,4 +8,5 @@ export default {
   brown: '#482F05',
   cordepele: '#CEB5AB',
   naoecordepele: '#ABC3CE',
+  yellow: '#DFBF94',
 }

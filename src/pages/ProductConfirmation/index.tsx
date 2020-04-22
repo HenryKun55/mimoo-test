@@ -1,32 +1,46 @@
-import React, { useEffect } from 'react'
-import { useDispatch } from 'react-redux'
+import React, { useEffect, useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 
 import {
   Container,
+  Header,
+  Footer,
   Title,
+  Image,
   ProductName,
-  ProductImage,
-  CongratulationsText,
   ContinueText,
+  CongratulationsText,
+  ContinueButton
 } from './styles'
 
 import * as ProductActions from '../../store/ducks/products/actions'
+import { IGetProduct } from '../../services/product.service'
+import { ApplicationState } from '../../store'
+import { useHistory } from 'react-router-dom'
 
 const ProductConfirmation: React.FC = () => {
 
+  const history = useHistory()
   const dispatch = useDispatch()
+  const { product } = useSelector((state: ApplicationState) => state.products)
 
-  useEffect(() => {
-    dispatch(ProductActions.cleanProduct())
-  }, [])
+  function handleContinue() {
+    dispatch(ProductActions.setProductRequest(product))
+    history.push('/home')
+  }
 
   return (
     <Container>
-      <Title>ProductConfirmation</Title>
-      <ProductName>ProductConfirmation</ProductName>
-      <ProductImage />
-      <CongratulationsText></CongratulationsText>
-      <ContinueText></ContinueText>
+      <Header>
+        <Title>Identificamos <br /> que você consome</Title>
+        <ProductName>{product?.name}</ProductName>
+      </Header>
+      <Image src={product?.image}/>
+      <Footer>
+        <CongratulationsText>Parabéns <br /> Você ganhou 100 pontos!</CongratulationsText>
+        <ContinueText>Continue para ganhar ainda <br /> mais pontos</ContinueText>
+      </Footer>
+      <ContinueButton onClick={handleContinue}></ContinueButton>
     </Container>
   )
 }

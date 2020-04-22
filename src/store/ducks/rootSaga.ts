@@ -6,7 +6,7 @@ import { storeUser } from '../ducks/auth/sagas'
 
 //Products
 import { ProductTypes } from '../ducks/products/types'
-import { getProducts, getProduct } from '../ducks/products/sagas'
+import { getProducts, getProduct, setProduct } from '../ducks/products/sagas'
 
 export default function* rootSaga() {
   yield all([
@@ -17,7 +17,7 @@ export default function* rootSaga() {
     //Products
     takeLatest(ProductTypes.GET_PRODUCTS_REQUEST, getProducts),
     takeLatest(ProductTypes.GET_PRODUCT_REQUEST, getProduct),
-    takeLatest(ProductTypes.CLEAN_PRODUCT, getProduct),
+    takeLatest(ProductTypes.SET_PRODUCT_REQUEST, setProduct),
     
   ])
 }
