@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { colors } from '../../styles'
 import { AiFillPlusCircle } from 'react-icons/ai'
-import { ListBrands as ListBrandsC, Tab as TabC } from '../../components'
+import { Tab as TabC } from '../../components'
 
 export const Container = styled.div`
   padding: 30px;
@@ -54,10 +54,6 @@ export const PlusButton = styled.div`
   width: 68px;
   height: 68px;
   border-radius: 34px;
-`
-
-export const ListBrands = styled(ListBrandsC)`
-  padding: 0 30px;
 `
 
 export const Tab = styled(TabC)`

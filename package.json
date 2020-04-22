@@ -2,6 +2,12 @@
   "name": "mimoo",
   "version": "0.1.0",
   "private": true,
+  "files": [
+    "src/",
+    "doczrc.js",
+    "tsconfig.json",
+    "package.json"
+  ],
   "dependencies": {
     "@material-ui/core": "^4.9.10",
     "@testing-library/jest-dom": "^4.2.4",
@@ -51,5 +57,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "remote-redux-devtools": "^0.5.16"
   }
 }

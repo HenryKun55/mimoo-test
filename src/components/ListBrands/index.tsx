@@ -35,12 +35,6 @@ const ListBrands: React.FC<Props> = ({ data, background, ...props }) => {
             {brand.products.map((product: Product, keyProduct) => (
               <Image key={keyProduct} src={product.image} background={background} />
             ))}
-            {brand.products.map((product: Product, keyProduct) => (
-              <Image key={keyProduct} src={product.image} background={background}/>
-            ))}
-            {brand.products.map((product: Product, keyProduct) => (
-              <Image key={keyProduct} src={product.image} background={background}/>
-            ))}
           </ProductContainer>
         </BrandContainer>
       ))}

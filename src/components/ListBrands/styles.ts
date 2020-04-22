@@ -21,8 +21,8 @@ export const Title = styled.span`
 export const BrandContainer = styled.div``
 
 export const ProductContainer = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  /* display: grid; */
+  /* grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); */
   margin-bottom: 10px;
 `
 

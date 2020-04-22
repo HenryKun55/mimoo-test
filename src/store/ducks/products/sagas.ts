@@ -1,5 +1,5 @@
 import { call, put } from 'redux-saga/effects'
-import { getProductsSuccess, getProductSuccess } from './actions'
+import { getProductsSuccess, getProductSuccess, cleanProduct } from './actions'
 import * as ProductService from '../../../services/product.service'
 import { IGetProducts, IGetProduct } from '../../../services/product.service'
 import ApiError from '../../../types/ApiError'
@@ -27,4 +27,8 @@ export function* getProduct(payload: any) {
       alert(error.description)
     }
   }
+}
+
+export function* clean(){
+  yield put(cleanProduct())
 }

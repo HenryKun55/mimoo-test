@@ -23,105 +23,7 @@
         "route": "/readme",
         "name": "Readme",
         "menu": "",
-        "headings": [
-          {
-            "slug": "mimoo-test",
-            "depth": 1,
-            "value": "Mimoo Test"
-          },
-          {
-            "slug": "desafio",
-            "depth": 2,
-            "value": "Desafio"
-          }
-        ]
-      }
-    },
-    {
-      "key": "components/Alert.mdx",
-      "value": {
-        "name": "Alert",
-        "menu": "Components",
-        "id": "b9efb26563d8a21eccf251b4f26ca50a",
-        "filepath": "components/Alert.mdx",
-        "fullpath": "/home/henry/Documentos/WorkSpace/mimoo/components/Alert.mdx",
-        "link": "",
-        "hidden": false,
-        "slug": "components-alert",
-        "route": "/components-alert",
-        "headings": [
-          {
-            "slug": "alert",
-            "depth": 1,
-            "value": "Alert"
-          },
-          {
-            "slug": "properties",
-            "depth": 2,
-            "value": "Properties"
-          },
-          {
-            "slug": "basic-usage",
-            "depth": 2,
-            "value": "Basic usage"
-          },
-          {
-            "slug": "using-different-kinds",
-            "depth": 2,
-            "value": "Using different kinds"
-          }
-        ]
-      }
-    },
-    {
-      "key": "components/Button.mdx",
-      "value": {
-        "name": "Button",
-        "menu": "Components",
-        "id": "f287cf3b9733fc5567c4e9b701076dd1",
-        "filepath": "components/Button.mdx",
-        "fullpath": "/home/henry/Documentos/WorkSpace/mimoo/components/Button.mdx",
-        "link": "",
-        "hidden": false,
-        "slug": "components-button",
-        "route": "/components-button",
-        "headings": [
-          {
-            "slug": "button",
-            "depth": 1,
-            "value": "Button"
-          },
-          {
-            "slug": "best-practices",
-            "depth": 3,
-            "value": "Best practices"
-          },
-          {
-            "slug": "properties",
-            "depth": 2,
-            "value": "Properties"
-          },
-          {
-            "slug": "basic-usage",
-            "depth": 2,
-            "value": "Basic usage"
-          },
-          {
-            "slug": "with-different-sizes",
-            "depth": 2,
-            "value": "With different sizes"
-          },
-          {
-            "slug": "with-different-colors",
-            "depth": 2,
-            "value": "With different colors"
-          },
-          {
-            "slug": "outlined",
-            "depth": 2,
-            "value": "Outlined"
-          }
-        ]
+        "headings": []
       }
     },
     {
@@ -141,27 +43,22 @@
             "slug": "getting-started",
             "depth": 1,
             "value": "Getting Started"
-          },
-          {
-            "slug": "consistency",
-            "depth": 2,
-            "value": "Consistency"
           }
         ]
       }
     },
     {
-      "key": "src/components/Button/index.mdx",
+      "key": "src/components/Button/Button.mdx",
       "value": {
         "name": "Button",
         "menu": "Components",
-        "id": "a08e664b64d63394cab05b2e5d624522",
-        "filepath": "src/components/Button/index.mdx",
-        "fullpath": "/home/henry/Documentos/WorkSpace/mimoo/src/components/Button/index.mdx",
+        "route": "/components/Button",
+        "id": "2b773349a016959194c905ce6ad9d2d4",
+        "filepath": "src/components/Button/Button.mdx",
+        "fullpath": "/home/henry/Documentos/WorkSpace/mimoo/src/components/Button/Button.mdx",
         "link": "",
         "hidden": false,
-        "slug": "src-components-button-index",
-        "route": "/src-components-button-index",
+        "slug": "src-components-button-button",
         "headings": [
           {
             "slug": "button",
@@ -169,87 +66,30 @@
             "value": "Button"
           },
           {
-            "slug": "best-practices",
+            "slug": "usage",
+            "depth": 2,
+            "value": "Usage"
+          },
+          {
+            "slug": "basic",
             "depth": 3,
-            "value": "Best practices"
+            "value": "Basic"
           },
           {
-            "slug": "properties",
-            "depth": 2,
-            "value": "Properties"
+            "slug": "advanced",
+            "depth": 3,
+            "value": "Advanced"
           },
           {
-            "slug": "basic-usage",
-            "depth": 2,
-            "value": "Basic usage"
+            "slug": "props",
+            "depth": 3,
+            "value": "Props"
           }
         ]
       }
     }
   ],
   "props": [
-    {
-      "key": "components/Alert.tsx",
-      "value": [
-        {
-          "description": "",
-          "displayName": "Alert",
-          "methods": [],
-          "props": {
-            "kind": {
-              "defaultValue": {
-                "value": "info"
-              },
-              "description": "Set this to change alert kind",
-              "name": "kind",
-              "required": true,
-              "type": {
-                "name": "\"info\" | \"positive\" | \"negative\" | \"warning\""
-              }
-            }
-          }
-        }
-      ]
-    },
-    {
-      "key": "components/Button.tsx",
-      "value": [
-        {
-          "description": "",
-          "displayName": "Button",
-          "methods": [],
-          "props": {
-            "scale": {
-              "defaultValue": null,
-              "description": "",
-              "name": "scale",
-              "required": true,
-              "type": {
-                "name": "\"small\" | \"normal\" | \"big\""
-              }
-            },
-            "kind": {
-              "defaultValue": null,
-              "description": "",
-              "name": "kind",
-              "required": true,
-              "type": {
-                "name": "\"primary\" | \"secondary\" | \"cancel\" | \"dark\" | \"gray\""
-              }
-            },
-            "outline": {
-              "defaultValue": null,
-              "description": "",
-              "name": "outline",
-              "required": true,
-              "type": {
-                "name": "boolean"
-              }
-            }
-          }
-        }
-      ]
-    },
     {
       "key": "src/App.tsx",
       "value": [
@@ -287,7 +127,26 @@
           "description": "",
           "displayName": "components",
           "methods": [],
-          "props": {}
+          "props": {
+            "tabs": {
+              "defaultValue": null,
+              "description": "",
+              "name": "tabs",
+              "required": true,
+              "type": {
+                "name": "TabProps[]"
+              }
+            },
+            "onChange": {
+              "defaultValue": null,
+              "description": "",
+              "name": "onChange",
+              "required": false,
+              "type": {
+                "name": "((index: number) => void) | undefined"
+              }
+            }
+          }
         }
       ]
     },
@@ -758,6 +617,122 @@
       "value": []
     },
     {
+      "key": "src/components/ListBrands/index.tsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "ListBrands",
+          "methods": [],
+          "props": {
+            "background": {
+              "defaultValue": null,
+              "description": "",
+              "name": "background",
+              "required": false,
+              "type": {
+                "name": "string | undefined"
+              }
+            },
+            "data": {
+              "defaultValue": null,
+              "description": "",
+              "name": "data",
+              "required": true,
+              "type": {
+                "name": "Brand[]"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/components/Tab/index.tsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Tab",
+          "methods": [],
+          "props": {
+            "tabs": {
+              "defaultValue": null,
+              "description": "",
+              "name": "tabs",
+              "required": true,
+              "type": {
+                "name": "TabProps[]"
+              }
+            },
+            "onChange": {
+              "defaultValue": null,
+              "description": "",
+              "name": "onChange",
+              "required": false,
+              "type": {
+                "name": "((index: number) => void) | undefined"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/pages/BarCodeReader/index.tsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "BarCodeReader",
+          "methods": [],
+          "props": {}
+        }
+      ]
+    },
+    {
+      "key": "src/pages/Home/index.tsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Home",
+          "methods": [],
+          "props": {}
+        }
+      ]
+    },
+    {
+      "key": "src/pages/Login/index.tsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Login",
+          "methods": [],
+          "props": {}
+        }
+      ]
+    },
+    {
+      "key": "src/pages/Splash/index.tsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Splash",
+          "methods": [],
+          "props": {}
+        }
+      ]
+    },
+    {
+      "key": "src/store/ducks/index.ts",
+      "value": []
+    },
+    {
+      "key": "src/store/ducks/auth/index.ts",
+      "value": []
+    },
+    {
+      "key": "src/store/ducks/products/index.ts",
+      "value": []
+    },
+    {
       "key": "src/components/Button/index.tsx",
       "value": [
         {
@@ -766,8 +741,10 @@
           "methods": [],
           "props": {
             "variant": {
-              "defaultValue": null,
-              "description": "",
+              "defaultValue": {
+                "value": "primary"
+              },
+              "description": "Set this to change colors of background and font",
               "name": "variant",
               "required": false,
               "type": {
@@ -3153,62 +3130,6 @@
           }
         }
       ]
-    },
-    {
-      "key": "src/components/ListBrands/index.tsx",
-      "value": [
-        {
-          "description": "",
-          "displayName": "ListBrands",
-          "methods": [],
-          "props": {}
-        }
-      ]
-    },
-    {
-      "key": "src/pages/Home/index.tsx",
-      "value": [
-        {
-          "description": "",
-          "displayName": "Home",
-          "methods": [],
-          "props": {}
-        }
-      ]
-    },
-    {
-      "key": "src/pages/Login/index.tsx",
-      "value": [
-        {
-          "description": "",
-          "displayName": "Login",
-          "methods": [],
-          "props": {}
-        }
-      ]
-    },
-    {
-      "key": "src/pages/Splash/index.tsx",
-      "value": [
-        {
-          "description": "",
-          "displayName": "Splash",
-          "methods": [],
-          "props": {}
-        }
-      ]
-    },
-    {
-      "key": "src/store/ducks/index.ts",
-      "value": []
-    },
-    {
-      "key": "src/store/ducks/auth/index.ts",
-      "value": []
-    },
-    {
-      "key": "src/store/ducks/products/index.ts",
-      "value": []
     }
   ]
 }

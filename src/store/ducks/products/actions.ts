@@ -13,3 +13,6 @@ export const getProductRequest = (barcode: string) =>
 
 export const getProductSuccess = (product: IGetProduct) =>
   action(ProductTypes.GET_PRODUCT_SUCCESS, { product })
+
+export const cleanProduct = () =>
+  action(ProductTypes.CLEAN_PRODUCT)

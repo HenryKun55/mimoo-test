@@ -1,0 +1,63 @@
+---
+name: Button
+menu: Components
+route: /components/Button
+---
+
+import { Playground, Props } from "docz";
+import Button from "../Button";
+
+# Button
+
+## Usage
+
+### Basic
+
+<Playground>
+  <Button onClick={() => alert('Variant is a primary!')}>
+    <span>Click Me!</span>
+  </Button>
+  <Button variant="secondary" onClick={() => alert('Variant is a secondary!')}>
+    <span>Click Me!</span>
+  </Button>
+</Playground>
+
+### Advanced
+
+<Playground>
+  <div style={{ marginBottom: 5 }}>
+    <Button onClick={() => alert('Variant is a primary!')} style={{ width: '100%', textAlign: 'start' }}>
+      <span>Click Me!</span>
+    </Button>
+  </div>
+  <div style={{ marginBottom: 5 }}>
+    <Button onClick={() => alert('Variant is a primary!')} style={{ width: '100%', textAlign: 'center' }}>
+      <span>Click Me!</span>
+    </Button>
+  </div>
+  <div style={{ marginBottom: 5 }}>
+    <Button onClick={() => alert('Variant is a primary!')} style={{ width: '100%', textAlign: 'end' }}>
+      <span>Click Me!</span>
+    </Button>
+  </div>
+
+  <div style={{ marginBottom: 5 }}>
+    <Button variant="secondary" onClick={() => alert('Variant is a secondary!')} style={{ width: '100%', textAlign: 'start', border: '1px solid #eee' }}>
+      <span>Click Me!</span>
+    </Button>
+  </div>
+  <div style={{ marginBottom: 5 }}>
+    <Button variant="secondary" onClick={() => alert('Variant is a secondary!')} style={{ width: '100%', textAlign: 'center', border: '1px solid #eee' }}>
+      <span>Click Me!</span>
+    </Button>
+  </div>
+  <div style={{ marginBottom: 5 }}>
+    <Button variant="secondary" onClick={() => alert('Variant is a secondary!')} style={{ width: '100%', textAlign: 'end', border: '1px solid #eee' }}>
+      <span>Click Me!</span>
+    </Button>
+  </div>
+</Playground>
+
+### Props
+
+<Props of={Button} />

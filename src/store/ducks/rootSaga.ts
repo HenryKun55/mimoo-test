@@ -17,6 +17,7 @@ export default function* rootSaga() {
     //Products
     takeLatest(ProductTypes.GET_PRODUCTS_REQUEST, getProducts),
     takeLatest(ProductTypes.GET_PRODUCT_REQUEST, getProduct),
+    takeLatest(ProductTypes.CLEAN_PRODUCT, getProduct),
     
   ])
 }

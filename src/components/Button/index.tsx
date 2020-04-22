@@ -2,13 +2,15 @@ import React from 'react'
 
 import { Container, Text } from './styles'
 
-type Variant = 'primary' | 'secondary'
-
-export interface Props {
-  variant?: Variant;
+export interface ButtonProps {
+  /**
+   * Set this to change colors of background and font
+   * @default primary
+   */
+  variant?: 'primary' | 'secondary';
 }
 
-const Button: React.FC<Props & React.ButtonHTMLAttributes<HTMLButtonElement>> = ({
+const Button: React.SFC<ButtonProps & React.ButtonHTMLAttributes<HTMLButtonElement>> = ({
   variant = 'primary',
   children,
   ...props

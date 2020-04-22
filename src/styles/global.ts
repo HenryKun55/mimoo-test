@@ -17,7 +17,7 @@ export default createGlobalStyle`
       font-family: 'Poppins', sans-serif;
     }
 
-     body {
+    body {
       -webkit-font-smoothing: antialiased;
     }
 

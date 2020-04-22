@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { useHistory } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 import { TiStarFullOutline, TiPlus } from 'react-icons/ti'
 
@@ -7,7 +8,7 @@ import { colors } from '../../styles'
 import { getName } from '../../storage/UserSettings'
 
 import { getProductsRequest } from '../../store/ducks/products/actions'
-
+import { ListBrands } from '../../components'
 import {
   Container,
   ContainerPoints,
@@ -16,7 +17,6 @@ import {
   TextPoint,
   TextPointValue,
   PlusButton,
-  ListBrands,
   Tab,
 } from './styles'
 import { IGetProducts } from '../../services/product.service'
@@ -24,6 +24,7 @@ import { IGetProducts } from '../../services/product.service'
 const Home: React.FC = () => {
   const [usename, setUsername] = useState('')
   const dispatch = useDispatch()
+  const history = useHistory()
 
   const tabs = useSelector(getTabsFromReduxState)
 
@@ -53,7 +54,7 @@ const Home: React.FC = () => {
   }
 
   function handlePlus() {
-
+    history.push('/scan')
   }
 
   function handleTabChange(index: number) {
@@ -75,8 +76,8 @@ const Home: React.FC = () => {
 
       <Tab tabs={tabs} onChange={handleTabChange}/>
 
-      <PlusButton>
-        <TiPlus color='white' size={45} onClick={handlePlus} />
+      <PlusButton onClick={handlePlus}>
+        <TiPlus color='white' size={45}/>
       </PlusButton>
     </>
   )
