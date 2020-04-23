@@ -21,25 +21,23 @@ export interface ListBrandProps {
 
 type Props = ListBrandProps
 
-const ListBrands: React.FC<Props> = ({ data, background, ...props }) => {
-  return (
-    <Container>
-      {data.map((brand: Brand, keyBrand) => (
-        <BrandContainer key={keyBrand}>
-          <TitleContainer>
-            <Icon size={20} color={colors.greyLight} />
-            <Title>{brand.name}</Title>
-          </TitleContainer>
+const ListBrands: React.FC<Props> = ({ data, background, ...props }) => (
+  <Container {...props}>
+    {data.map((brand: Brand, keyBrand) => (
+      <BrandContainer key={keyBrand}>
+        <TitleContainer>
+          <Icon size={20} color={colors.greyLight} />
+          <Title>{brand.name}</Title>
+        </TitleContainer>
 
-          <ProductContainer>
-            {brand.products.map((product: Product, keyProduct) => (
-              <Image key={keyProduct} src={product.image} background={background} />
-            ))}
-          </ProductContainer>
-        </BrandContainer>
-      ))}
-    </Container>
-  )
-}
+        <ProductContainer>
+          {brand.products.map((product: Product, keyProduct) => (
+            <Image key={keyProduct} src={product.image} background={background} />
+          ))}
+        </ProductContainer>
+      </BrandContainer>
+    ))}
+  </Container>
+)
 
 export default ListBrands
