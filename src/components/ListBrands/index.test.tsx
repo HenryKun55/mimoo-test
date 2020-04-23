@@ -95,39 +95,41 @@ afterEach(() => {
 //     );
 //   });
 // });
+describe('ListBrands Component Tests', () => {
 
-it('should render a title of each brand', () => {
-  act(() => {
-    render(<ListBrands id='list-brands' data={data} />, container)
+  it('should render a title of each brand', () => {
+    act(() => {
+      render(<ListBrands id='list-brands' data={data} />, container)
+    })
+    
+    const listBrands = container?.querySelector('#list-brands')
+  
+    data.forEach(brand => expect(listBrands?.innerHTML).toContain(brand.name))
   })
   
-  const listBrands = container?.querySelector('#list-brands')
-
-  data.forEach(brand => expect(listBrands?.innerHTML).toContain(brand.name))
-})
-
-it('should render a name of the products for each brands', () => {
-  act(() => {
-    render(<ListBrands id='list-brands' data={data} />, container)
-  })
+  it('should render a name of the products for each brands', () => {
+    act(() => {
+      render(<ListBrands id='list-brands' data={data} />, container)
+    })
+    
+    const listBrands = container?.querySelector('#list-brands')
   
-  const listBrands = container?.querySelector('#list-brands')
-
-  data.forEach(brand =>
-    brand.products.forEach(product => 
-      expect(listBrands?.innerHTML).toContain(product.image)
+    data.forEach(brand =>
+      brand.products.forEach(product => 
+        expect(listBrands?.innerHTML).toContain(product.image)
+      )
     )
-  )
-})
-
-it('should render background color of images is correct', () => {
-  const color = colors.cordepele
-
-  act(() => {
-    render(<ListBrands background={color} id='list-brands' data={data} />, container)
   })
   
-  const image = container?.getElementsByTagName('img')[0]
-
-  expect(image).toHaveStyle(`background-color: ${color}`)
+  it('should render background color of images is correct', () => {
+    const color = colors.cordepele
+  
+    act(() => {
+      render(<ListBrands background={color} id='list-brands' data={data} />, container)
+    })
+    
+    const image = container?.getElementsByTagName('img')[0]
+  
+    expect(image).toHaveStyle(`background-color: ${color}`)
+  })
 })

@@ -3,9 +3,9 @@ import { AppBar, Typography, Box } from '@material-ui/core'
 
 import { useStyles, Tabs, Tab as CustomTab, Container } from './styles'
 
-
 export interface Props {
   tabs: TabProps[];
+  initialValue?: number;
   onChange?: (index: number) => void;
 }
 
@@ -21,7 +21,6 @@ interface TabPanelProps {
 }
 
 function TabPanel(props: TabPanelProps) {
-
   const { children, value, index } = props
 
   return (
@@ -35,9 +34,9 @@ function TabPanel(props: TabPanelProps) {
   )
 }
 
-const Tab: React.FC<Props> = ({ tabs = [], onChange, ...props }) => {
+const Tab: React.FC<Props> = ({ tabs = [], initialValue = 0, onChange, ...props }) => {
   const classes = useStyles()
-  const [value, setValue] = useState(0)
+  const [value, setValue] = useState(initialValue)
 
   const handleChange = (event: React.ChangeEvent<{}>, newValue: number) => {
     setValue(newValue)
