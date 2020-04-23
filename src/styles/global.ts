@@ -17,12 +17,14 @@ export default createGlobalStyle`
       font-family: 'Poppins', sans-serif;
     }
 
-    body {
+    html, body {
+      height: 100%;
       -webkit-font-smoothing: antialiased;
     }
 
     #root {
       margin: 0 auto;
+      height: 100%;
     } 
 
     button {

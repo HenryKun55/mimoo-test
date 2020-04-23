@@ -15,7 +15,11 @@ import {
   ConfirmButton,
   BarcodeReader,
   CodeContainer,
-  TitleBarCode
+  TitleBarCode,
+  CanvasContainer,
+  Canvas,
+  CodeResultTitle,
+  CodeResult
 } from './styles'
 
 // import './drawingBuffer.css'
@@ -131,12 +135,15 @@ const Scan: React.FC = () => {
         <Title>Escanear Produto</Title>
       </Header>
       <BarcodeReader ref={barcodeReaderRef}>
-        <TitleBarCode>Escaneando o código <br /> de barras</TitleBarCode>
-        <canvas ref={canvasRef} id='meu-canvas'/>
+        <CanvasContainer>
+          <TitleBarCode>Escaneando o código <br /> de barras</TitleBarCode>
+          <Canvas ref={canvasRef} id='meu-canvas'/>
+          <CodeContainer>
+            <CodeResultTitle>Número do código de Barras:</CodeResultTitle>
+            <CodeResult>{barcode || `00000000000`}</CodeResult>
+          </CodeContainer>
+        </CanvasContainer> 
       </BarcodeReader>
-      {/* <CodeContainer>
-
-      </CodeContainer> */}
       <Footer>
         <ConfirmButton variant="secondary" onClick={handleConfirm}>Confirmar</ConfirmButton>
       </Footer>
