@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 import { colors } from '../../styles'
-
 import { Button } from '../../components'
 
 export const Container = styled.div`
@@ -42,6 +41,9 @@ export const Description = styled.h3`
 
 export const Image = styled.img`
   object-fit: contain;
+  position: fixed;
+  bottom: 65px;
+  left: 35%;
 `
 
 export const StartButton = styled(Button)`

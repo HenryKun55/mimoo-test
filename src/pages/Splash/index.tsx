@@ -29,9 +29,8 @@ const Splash: React.FC = () => {
       <Header>
         <Title>Bem vindo à <br />Mimmo!</Title>
         <Subtitle>Alegre. Divertido. Relevante. <br />Você vai adorar.</Subtitle>
-        <Description>Nos conte um pouco sobre você e ganhe pontos</Description>
+        <Description>Nos conte um pouco sobre <br />você e ganhe pontos</Description>
       </Header>
-
       <Image src={splash} alt='Splash'/>
       <StartButton onClick={handleStart}>Começar</StartButton>
     </Container>
