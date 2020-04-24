@@ -59,5 +59,6 @@ export const PlusButton = styled.div`
 
 export const Tab = styled(TabC)`
   padding: 0 30px;
+  margin-top: 60px;
 `
 export const Star = styled(TiStarFullOutline)``
