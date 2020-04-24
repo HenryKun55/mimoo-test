@@ -1,8 +1,4 @@
-import { IGetProducts, IGetProduct } from '../../../services/product.service';
-
-/**
- * Types
- */
+import { IGetProducts, IGetProduct } from '../../../services/product.service'
 
 export interface ProductState {
   data: IGetProducts[];

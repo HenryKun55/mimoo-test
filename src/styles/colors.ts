@@ -6,7 +6,7 @@ export default {
   greyLight: '#999999',
   greyLight2: '#949494',
   brown: '#482F05',
-  cordepele: '#CEB5AB',
-  naoecordepele: '#ABC3CE',
-  yellow: '#DFBF94',
+  clamShell: '#CEB5AB',
+  casper: '#ABC3CE',
+  calico: '#DFBF94',
 }

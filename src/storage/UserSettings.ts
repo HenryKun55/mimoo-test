@@ -1,5 +1,3 @@
-// localforage
-
 export enum Types {
   NAME = 'MimmoApp@name'
 }

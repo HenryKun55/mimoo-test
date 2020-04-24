@@ -6,9 +6,6 @@ const INITIAL_STATE: ProductState = {
   loading: false,
 }
 
-/**
- * Reducer
- */
 const product: Reducer<ProductState> = (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case ProductTypes.GET_PRODUCTS_REQUEST:
@@ -24,7 +21,7 @@ const product: Reducer<ProductState> = (state = INITIAL_STATE, action) => {
     case ProductTypes.SET_PRODUCT_SUCCESS:
       return { ...state, loading: false, data: [...state.data, action.payload.product], product: undefined }
     default:
-      return { ...state }
+      return state
   }
 }
 

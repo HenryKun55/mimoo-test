@@ -1,13 +1,14 @@
 import styled from 'styled-components'
 import { makeStyles, Theme, withStyles } from '@material-ui/core/styles'
-import { Tabs as TabsMUI, Tab as TabMUI } from '@material-ui/core'
+import { Tabs as TabsMUI, Tab as TabMUI, Box as BoxMUI } from '@material-ui/core'
 import { colors } from '../../styles';
 
 export const Tabs = withStyles({
   indicator: {
     backgroundColor: colors.primary,
     color: colors.primary,
-    height: 4,
+    height: 3,
+    bottom: 8,
   },
 })(TabsMUI);
 
@@ -17,12 +18,22 @@ export const Tab = withStyles({
     textTransform: 'capitalize',
     fontWeight: 'bold',
     color: colors.greyLight,
+    padding: 0,
+    "&:not(:first-child)": {
+      marginLeft: 14
+    },
   },
   selected: {
     color: colors.primary,
     fontWeight: 'bold',
   },
 })(TabMUI);
+
+export const Box = withStyles({
+  root: {
+    padding: 0
+  }
+})(BoxMUI)
 
 export const useStyles = makeStyles((theme: Theme) => ({
   root: {

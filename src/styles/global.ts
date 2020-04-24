@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from 'styled-components'
 
 export default createGlobalStyle`
 
@@ -11,18 +11,17 @@ export default createGlobalStyle`
     * {
       margin: 0;
       padding: 0;
-      /* outline: 0; */
-      /* height: 100%; */
-      /* box-sizing: border-box; */
       font-family: 'Poppins', sans-serif;
     }
 
-    body {
+    html, body {
+      height: 100%;
       -webkit-font-smoothing: antialiased;
     }
 
     #root {
       margin: 0 auto;
+      height: 100%;
     } 
 
     button {

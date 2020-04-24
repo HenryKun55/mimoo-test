@@ -1,0 +1,55 @@
+---
+menu: Components
+name: ListBrands
+route: /components/listbrands
+---
+
+import { Playground, Props } from "docz";
+import ListBrands from "./";
+
+# ListBrands
+
+## Usage
+
+<Playground>
+  {() => {
+    const background = "#ABC3CE";
+    const data = [
+      {
+        name: "My Brand 1",
+        products: [
+          {
+            name: "Product 1",
+            image:
+              "https://pngimage.net/wp-content/uploads/2018/06/perfumes-jequiti-png-3.png",
+          },
+          {
+            name: "Product 2",
+            image:
+              "https://www.frannita.com/wp-content/uploads/2019/12/Frannita-love-is-bella.png",
+          },
+        ],
+      },
+      {
+        name: "My Brand 2",
+        products: [
+          {
+            name: "Product 1",
+            image:
+              "https://pngimage.net/wp-content/uploads/2018/06/perfumes-jequiti-png-3.png",
+          },
+          {
+            name: "Product 2",
+            image:
+              "https://www.frannita.com/wp-content/uploads/2019/12/Frannita-love-is-bella.png",
+          },
+        ],
+      },
+    ];
+    return <ListBrands data={data} background={background} />;
+  }}
+</Playground>
+
+## Props
+
+<Props of={ListBrands} />

@@ -3,10 +3,11 @@ import { useHistory } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 import { TiStarFullOutline, TiPlus } from 'react-icons/ti'
 
-import { ApplicationState } from '../../store'
+import User from '../../types/User'
 import { colors } from '../../styles'
 import { getName } from '../../storage/UserSettings'
-
+import { IGetProducts } from '../../services/product.service'
+import { ApplicationState } from '../../store'
 import { getProductsRequest } from '../../store/ducks/products/actions'
 import { ListBrands } from '../../components'
 import {
@@ -19,23 +20,30 @@ import {
   PlusButton,
   Tab,
 } from './styles'
-import { IGetProducts } from '../../services/product.service'
 
 const Home: React.FC = () => {
-  const [usename, setUsername] = useState('')
-  const dispatch = useDispatch()
+  const [user, setUser] = useState<User>({ name: '', points: 100 })
   const history = useHistory()
-
+  
+  const dispatch = useDispatch()
   const tabs = useSelector(getTabsFromReduxState)
+  const points = useSelector(getPoints)
 
   useEffect(() => {
     (async () => {
       const name = await getName()
-      setUsername(name !== null ? name : '')
+      setUser({
+        name: name !== null ? name : '',
+        points
+      })
       
       dispatch(getProductsRequest())
     })()
   }, [])
+
+  function getPoints({ auth }: ApplicationState) {
+    return auth.data.points
+  }
 
   function getTabsFromReduxState(state: ApplicationState) {
     return state.products.data.map((item: IGetProducts) => ({
@@ -43,7 +51,7 @@ const Home: React.FC = () => {
       render: () => (
         <ListBrands
           data={item.brands}
-          background={item.category === 'Snacks' ? colors.naoecordepele : colors.cordepele}
+          background={item.category === 'Snacks' ? colors.casper : colors.clamShell}
         />
       ),
     }))
@@ -57,27 +65,23 @@ const Home: React.FC = () => {
     history.push('/scan')
   }
 
-  function handleTabChange(index: number) {
-    console.log('Tab index:', index)
-  }
-
   return (
     <>
       <Container>
-        <Title>Olá {formattedName(usename.trim().split(' ')[0])}!</Title>
+        <Title>Olá {formattedName(user.name.trim().split(' ')[0])}!</Title>
         <Subtitle>Adicione mais produtos à sua lista</Subtitle>
         <Subtitle>e ganhe pontos!</Subtitle>
         <ContainerPoints>
           <TiStarFullOutline color={colors.brown} size={18}/>
           <TextPoint>Pontos</TextPoint>
         </ContainerPoints>
-        <TextPointValue>100</TextPointValue>
+        <TextPointValue>{user.points}</TextPointValue>
       </Container>
 
-      <Tab tabs={tabs} onChange={handleTabChange}/>
+      <Tab tabs={tabs} />
 
       <PlusButton onClick={handlePlus}>
-        <TiPlus color='white' size={45}/>
+        <TiPlus color={colors.secondary} size={45}/>
       </PlusButton>
     </>
   )

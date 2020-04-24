@@ -1,8 +1,8 @@
 import api from './api'
 
-import ApiError from '../types/ApiError'
-import Product from '../types/Product'
 import Brand from '../types/Brand'
+import Product from '../types/Product'
+import ApiError from '../types/ApiError'
 
 export interface IGetProducts {
   category: string;
@@ -20,7 +20,6 @@ export async function getProducts(): Promise<IGetProducts[]> {
     const { data } = await api.get('/products')
     return data
   } catch (error) {
-    console.log('[ProductService] - Error', error)
     throw new ApiError(error.response.data.description)
   }
 }

@@ -8,21 +8,20 @@ export const TitleContainer = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 `
 
 export const Icon = styled(FiMapPin)``
 
 export const Title = styled.span`
-  color: ${colors.greyLight};
-  margin-left: 10px;
+  color: ${colors.greyLight2};
+  margin-left: 5px;
+  font-size: 12px;
 `
 
 export const BrandContainer = styled.div``
 
 export const ProductContainer = styled.div`
-  /* display: grid; */
-  /* grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); */
   margin-bottom: 10px;
 `
 

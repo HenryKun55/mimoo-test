@@ -1,4 +1,5 @@
 import { action } from 'typesafe-actions'
+
 import { ProductTypes } from './types'
 import { IGetProducts, IGetProduct } from '../../../services/product.service'
 
