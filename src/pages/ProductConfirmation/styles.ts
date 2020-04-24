@@ -1,14 +1,14 @@
-import styled from 'styled-components';
-import { Button } from '../../components';
-import { colors } from '../../styles';
+import styled from 'styled-components'
+import { colors } from '../../styles'
+import { Button } from '../../components'
 
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  background-color: ${colors.yellow};
+  background-color: ${colors.calico};
   text-align: center;
   height: 100%;
-`;
+`
 
 export const Header = styled.div`
   height: 25%;
@@ -38,13 +38,13 @@ export const Title = styled.h2`
   color: ${colors.secondary};
   margin-bottom: 10px;
   font-weight: 600;
-`;
+`
 
 export const ProductName = styled.h1`
   font-size: 34px;
   color: ${colors.secondary};
   font-weight: bold;
-`;
+`
 
 export const Image = styled.img`
   object-fit: contain;
@@ -56,13 +56,13 @@ export const CongratulationsText = styled.h3`
   color: ${colors.grey};
   font-weight: bold;
   margin-bottom: 10px;
-`;
+`
 
 export const ContinueText = styled.h3`
   font-size: 22px;
   color: ${colors.grey};
   font-weight: 300;
-`;
+`
 
 export const ContainerButton = styled.div``
 

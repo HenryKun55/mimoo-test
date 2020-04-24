@@ -3,10 +3,11 @@ import { useHistory } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 import { TiStarFullOutline, TiPlus } from 'react-icons/ti'
 
-import { ApplicationState } from '../../store'
+import User from '../../types/User'
 import { colors } from '../../styles'
 import { getName } from '../../storage/UserSettings'
-
+import { IGetProducts } from '../../services/product.service'
+import { ApplicationState } from '../../store'
 import { getProductsRequest } from '../../store/ducks/products/actions'
 import { ListBrands } from '../../components'
 import {
@@ -19,15 +20,12 @@ import {
   PlusButton,
   Tab,
 } from './styles'
-import { IGetProducts } from '../../services/product.service'
-
-import User from '../../types/User'
 
 const Home: React.FC = () => {
   const [user, setUser] = useState<User>({ name: '', points: 100 })
-  const dispatch = useDispatch()
   const history = useHistory()
-
+  
+  const dispatch = useDispatch()
   const tabs = useSelector(getTabsFromReduxState)
   const points = useSelector(getPoints)
 
@@ -53,7 +51,7 @@ const Home: React.FC = () => {
       render: () => (
         <ListBrands
           data={item.brands}
-          background={item.category === 'Snacks' ? colors.naoecordepele : colors.cordepele}
+          background={item.category === 'Snacks' ? colors.casper : colors.clamShell}
         />
       ),
     }))
@@ -65,10 +63,6 @@ const Home: React.FC = () => {
 
   function handlePlus() {
     history.push('/scan')
-  }
-
-  function handleTabChange(index: number) {
-    console.log('Tab index:', index)
   }
 
   return (
@@ -84,10 +78,10 @@ const Home: React.FC = () => {
         <TextPointValue>{user.points}</TextPointValue>
       </Container>
 
-      <Tab tabs={tabs} onChange={handleTabChange}/>
+      <Tab tabs={tabs} />
 
       <PlusButton onClick={handlePlus}>
-        <TiPlus color='white' size={45}/>
+        <TiPlus color={colors.secondary} size={45}/>
       </PlusButton>
     </>
   )

@@ -1,16 +1,15 @@
 import { all, takeLatest } from 'redux-saga/effects'
 
-//Auth
+// Auth
 import { AuthTypes } from '../ducks/auth/types'
 import { storeUser } from '../ducks/auth/sagas'
 
-//Products
+// Products
 import { ProductTypes } from '../ducks/products/types'
 import { getProducts, getProduct, setProduct } from '../ducks/products/sagas'
 
 export default function* rootSaga() {
   yield all([
-    
     //Auth
     takeLatest(AuthTypes.STORE_REQUEST, storeUser),
 

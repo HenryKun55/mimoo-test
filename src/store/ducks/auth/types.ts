@@ -1,8 +1,4 @@
-import User from '../../../types/User';
-
-/**
- * Types
- */
+import User from '../../../types/User'
 
 export interface AuthState {
   data: User;

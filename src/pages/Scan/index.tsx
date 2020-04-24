@@ -1,12 +1,12 @@
-import React, { useState, useEffect, useRef, RefObject } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
+import React, { useState, useEffect, useRef } from 'react'
+import Quagga from 'quagga'
 import { useHistory } from 'react-router-dom'
 import { IoMdArrowRoundBack } from 'react-icons/io'
-import Quagga from 'quagga'
+import { useDispatch, useSelector } from 'react-redux'
 
 import { colors } from '../../styles'
-import * as ProductActions from '../../store/ducks/products/actions'
 import { ApplicationState } from '../../store'
+import * as ProductActions from '../../store/ducks/products/actions'
 import {
   Container,
   Header,
@@ -22,24 +22,20 @@ import {
   CodeResult
 } from './styles'
 
-// import './drawingBuffer.css'
-
 const Scan: React.FC = () => {
-  const barcodeReaderRef = useRef<HTMLDivElement>(null)
-  const canvasRef = useRef<HTMLCanvasElement>(null)
   const [barcode, setBarcode] = useState('')
-
-  const { product, loading } = useSelector((state: ApplicationState) => state.products)
+  const canvasRef = useRef<HTMLCanvasElement>(null)
+  const barcodeReaderRef = useRef<HTMLDivElement>(null)
 
   const history = useHistory()
   const dispatch = useDispatch()
+  const { product, loading } = useSelector((state: ApplicationState) => state.products)
 
   useEffect(() => {
-    if (!canvasRef.current) {
-      return
-    }
+    if (!canvasRef.current) return
+
     const canvas: HTMLCanvasElement = canvasRef.current
-    draw(canvas)
+    drawRectangleCamera(canvas)
   }, [canvasRef.current])
 
   useEffect(() => {
@@ -61,8 +57,6 @@ const Scan: React.FC = () => {
         type : "LiveStream",
         target: barcodeReaderRef.current,
         constraints: {
-          // width: '5%',
-          // height: '100%',
           facingMode: "environment",
         },
       },
@@ -77,15 +71,14 @@ const Scan: React.FC = () => {
 
     Quagga.start()
     Quagga.onDetected(handleBarcodeDetected)
-    // Quagga.onProcessed(handleBarcodeProcessed)
   }
 
   function handleBarcodeDetected(result) {
-    console.log(result)
+    console.log('Barcode Result =>', result)
     setBarcode(result.codeResult.code)
   }
 
-  function draw(canvas: HTMLCanvasElement) {
+  function drawRectangleCamera(canvas: HTMLCanvasElement) {
     const ctx = canvas.getContext("2d")
 
     if(ctx) {
@@ -134,6 +127,7 @@ const Scan: React.FC = () => {
       <IoMdArrowRoundBack color={colors.primary} size={30} onClick={handleBack}/>
         <Title>Escanear Produto</Title>
       </Header>
+
       <BarcodeReader ref={barcodeReaderRef}>
         <CanvasContainer>
           <TitleBarCode>Escaneando o código <br /> de barras</TitleBarCode>
@@ -144,6 +138,7 @@ const Scan: React.FC = () => {
           </CodeContainer>
         </CanvasContainer> 
       </BarcodeReader>
+
       <Footer>
         <ConfirmButton variant="secondary" onClick={handleConfirm}>Confirmar</ConfirmButton>
       </Footer>

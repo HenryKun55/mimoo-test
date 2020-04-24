@@ -2,8 +2,7 @@ import styled from 'styled-components'
 import { FiMapPin } from 'react-icons/fi'
 import { colors } from '../../styles'
 
-export const Container = styled.div`
-`
+export const Container = styled.div``
 
 export const TitleContainer = styled.div`
   display: flex;
@@ -23,8 +22,6 @@ export const Title = styled.span`
 export const BrandContainer = styled.div``
 
 export const ProductContainer = styled.div`
-  /* display: grid; */
-  /* grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); */
   margin-bottom: 10px;
 `
 

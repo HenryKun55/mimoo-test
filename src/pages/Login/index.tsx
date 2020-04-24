@@ -1,19 +1,19 @@
 import React, { useState } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { useHistory } from 'react-router-dom'
 import { IoMdArrowRoundBack } from 'react-icons/io'
 
-import { Container, Title, Input, ContinueButton } from './styles'
-import { colors } from '../../styles';
-
+import { colors } from '../../styles'
 import * as AuthActions from '../../store/ducks/auth/actions'
+import { Container, Title, Input, ContinueButton } from './styles'
 
 const Login: React.FC = () => {
   const [name, setName] = useState('')
-  const points = 100
-
+  
   const history = useHistory()
   const dispatch = useDispatch()
+
+  const points = 100
 
   function handleContinue() {
     if (name.length > 0) {

@@ -1,6 +1,6 @@
 import styled from 'styled-components'
+import { colors, fonts } from '../../styles'
 import { Button } from '../../components'
-import { colors } from '../../styles'
 
 export const Container = styled.div`
   display: flex;
@@ -19,7 +19,7 @@ export const Title = styled.h1`
   text-align: center;
   font-size: 23px;
   color: ${colors.grey};
-  font-family: 'Circular Std Book';
+  font-family: ${fonts.circular};
   opacity: 0.47;
 `
 
@@ -38,7 +38,7 @@ export const TitleBarCode = styled.h1`
   width: 100%;
   text-align: center;
   color: ${colors.secondary};
-  font-family: 'Circular Std Book';
+  font-family: ${fonts.circular};
 `
 
 export const BarcodeReader = styled.div`
@@ -85,7 +85,7 @@ export const Canvas = styled.canvas`
 
 export const CodeResultTitle = styled.span`
   text-align: center;
-  font-family: 'Circular Std Book';
+  font-family: ${fonts.circular};
   font-size: 17px;
   margin-left: 20px;
   color: ${colors.secondary};

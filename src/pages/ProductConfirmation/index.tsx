@@ -1,6 +1,9 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
+import { useHistory } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 
+import { ApplicationState } from '../../store'
+import * as ProductActions from '../../store/ducks/products/actions'
 import {
   Container,
   Header,
@@ -15,13 +18,7 @@ import {
   ContinueButton
 } from './styles'
 
-import * as ProductActions from '../../store/ducks/products/actions'
-import { IGetProduct } from '../../services/product.service'
-import { ApplicationState } from '../../store'
-import { useHistory } from 'react-router-dom'
-
 const ProductConfirmation: React.FC = () => {
-
   const history = useHistory()
   const dispatch = useDispatch()
   const { product } = useSelector((state: ApplicationState) => state.products)
@@ -37,13 +34,16 @@ const ProductConfirmation: React.FC = () => {
         <Title>Identificamos <br /> que você consome</Title>
         <ProductName>{product?.name}</ProductName>
       </Header>
+
       <Center>
         <Image src={product?.image}/>
       </Center>
+
       <Footer>
         <CongratulationsText>Parabéns <br /> Você ganhou 100 pontos!</CongratulationsText>
         <ContinueText>Continue para ganhar ainda <br /> mais pontos</ContinueText>
       </Footer>
+
       <ContainerButton>
         <ContinueButton variant="secondary" onClick={handleContinue}>Salvar</ContinueButton>
       </ContainerButton>

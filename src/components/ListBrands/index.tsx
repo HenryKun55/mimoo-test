@@ -2,6 +2,7 @@ import React from 'react'
 
 import Brand from '../../types/Brand'
 import Product from '../../types/Product'
+import { colors } from '../../styles'
 import {
   Container,
   BrandContainer,
@@ -12,9 +13,8 @@ import {
   Title,
 } from './styles'
 
-import { colors } from '../../styles'
-
 export interface ListBrandProps {
+  id?: string;
   /**
    * Set this to change colors of background
    */
