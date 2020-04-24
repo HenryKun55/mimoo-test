@@ -9,7 +9,7 @@ import { getName } from '../../storage/UserSettings'
 import { IGetProducts } from '../../services/product.service'
 import { ApplicationState } from '../../store'
 import { getProductsRequest } from '../../store/ducks/products/actions'
-import { ListBrands } from '../../components'
+
 import {
   Container,
   ContainerPoints,
@@ -19,6 +19,7 @@ import {
   TextPointValue,
   PlusButton,
   Tab,
+  ListBrands
 } from './styles'
 
 const Home: React.FC = () => {

@@ -67,6 +67,7 @@ export const CodeContainer = styled.div`
   flex-direction: column;
   justify-content: space-evenly;
   align-items: flex-start;
+  backdrop-filter: blur(30px);
 `
 
 export const Footer = styled.div`

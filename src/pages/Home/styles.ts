@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { colors } from '../../styles'
 import { TiStarFullOutline } from 'react-icons/ti'
-import { Tab as TabC } from '../../components'
+import { Tab as TabC, ListBrands as ListBrandsC } from '../../components'
 
 export const Container = styled.div`
   padding: 30px;
@@ -59,5 +59,9 @@ export const PlusButton = styled.div`
 
 export const Tab = styled(TabC)`
   padding: 0 30px;
+`
+
+export const ListBrands = styled(ListBrandsC)`
+  margin-top: 60px;
 `
 export const Star = styled(TiStarFullOutline)``
