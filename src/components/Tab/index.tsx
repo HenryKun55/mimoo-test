@@ -5,7 +5,13 @@ import { useStyles, Tabs, Tab as CustomTab, Container, Box } from './styles'
 
 export interface Props {
   tabs: TabProps[];
+  /**
+   * Initial value from Tab index
+   */
   initialValue?: number;
+  /** 
+   * This function receive the index of the clicked tab when it's clicked
+   */
   onChange?: (index: number) => void;
 }
 

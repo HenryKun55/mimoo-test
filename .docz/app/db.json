@@ -20,21 +20,6 @@
   },
   "entries": [
     {
-      "key": "README.md",
-      "value": {
-        "id": "04c6e90faac2675aa89e2176d2eec7d8",
-        "filepath": "README.md",
-        "fullpath": "/home/henry/Documentos/WorkSpace/mimoo/README.md",
-        "link": "",
-        "hidden": false,
-        "slug": "readme",
-        "route": "/readme",
-        "name": "Readme",
-        "menu": "",
-        "headings": []
-      }
-    },
-    {
       "key": "src/index.mdx",
       "value": {
         "name": "Getting Started",
@@ -60,7 +45,7 @@
       "value": {
         "name": "Button",
         "menu": "Components",
-        "route": "/components/Button",
+        "route": "/components/button",
         "id": "2b773349a016959194c905ce6ad9d2d4",
         "filepath": "src/components/Button/Button.mdx",
         "fullpath": "/home/henry/Documentos/WorkSpace/mimoo/src/components/Button/Button.mdx",
@@ -101,7 +86,7 @@
       "value": {
         "menu": "Components",
         "name": "ListBrands",
-        "route": "/components/ListBrands",
+        "route": "/components/listbrands",
         "id": "271b5b9994f0a08cd75b6a0616645c82",
         "filepath": "src/components/ListBrands/ListBrands.mdx",
         "fullpath": "/home/henry/Documentos/WorkSpace/mimoo/src/components/ListBrands/ListBrands.mdx",
@@ -132,14 +117,30 @@
       "value": {
         "menu": "Components",
         "name": "Tab",
-        "route": "components/tab",
+        "route": "/components/tab",
         "id": "71f0c5b5ef71fde95d57028f11281824",
         "filepath": "src/components/Tab/Tab.mdx",
         "fullpath": "/home/henry/Documentos/WorkSpace/mimoo/src/components/Tab/Tab.mdx",
         "link": "",
         "hidden": false,
         "slug": "src-components-tab-tab",
-        "headings": []
+        "headings": [
+          {
+            "slug": "tab",
+            "depth": 1,
+            "value": "Tab"
+          },
+          {
+            "slug": "usage",
+            "depth": 2,
+            "value": "Usage"
+          },
+          {
+            "slug": "props",
+            "depth": 2,
+            "value": "Props"
+          }
+        ]
       }
     }
   ],
@@ -193,7 +194,7 @@
             },
             "initialValue": {
               "defaultValue": null,
-              "description": "",
+              "description": "Initial value from Tab index",
               "name": "initialValue",
               "required": false,
               "type": {
@@ -202,7 +203,7 @@
             },
             "onChange": {
               "defaultValue": null,
-              "description": "",
+              "description": "This function receive the index of the clicked tab when it's clicked",
               "name": "onChange",
               "required": false,
               "type": {
@@ -665,6 +666,10 @@
     },
     {
       "key": "src/types/ApiError.ts",
+      "value": []
+    },
+    {
+      "key": "src/types/Brand.ts",
       "value": []
     },
     {
@@ -3075,6 +3080,36 @@
       ]
     },
     {
+      "key": "src/components/ListBrands/index.tsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "ListBrands",
+          "methods": [],
+          "props": {
+            "background": {
+              "defaultValue": null,
+              "description": "Set this to change colors of background",
+              "name": "background",
+              "required": false,
+              "type": {
+                "name": "string | undefined"
+              }
+            },
+            "data": {
+              "defaultValue": null,
+              "description": "",
+              "name": "data",
+              "required": true,
+              "type": {
+                "name": "Brand[]"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
       "key": "src/components/Tab/index.tsx",
       "value": [
         {
@@ -3093,7 +3128,7 @@
             },
             "initialValue": {
               "defaultValue": null,
-              "description": "",
+              "description": "Initial value from Tab index",
               "name": "initialValue",
               "required": false,
               "type": {
@@ -3102,7 +3137,7 @@
             },
             "onChange": {
               "defaultValue": null,
-              "description": "",
+              "description": "This function receive the index of the clicked tab when it's clicked",
               "name": "onChange",
               "required": false,
               "type": {
@@ -3179,40 +3214,6 @@
     {
       "key": "src/store/ducks/products/index.ts",
       "value": []
-    },
-    {
-      "key": "src/types/Brand.ts",
-      "value": []
-    },
-    {
-      "key": "src/components/ListBrands/index.tsx",
-      "value": [
-        {
-          "description": "",
-          "displayName": "ListBrands",
-          "methods": [],
-          "props": {
-            "background": {
-              "defaultValue": null,
-              "description": "Set this to change colors of background",
-              "name": "background",
-              "required": false,
-              "type": {
-                "name": "string | undefined"
-              }
-            },
-            "data": {
-              "defaultValue": null,
-              "description": "",
-              "name": "data",
-              "required": true,
-              "type": {
-                "name": "Brand[]"
-              }
-            }
-          }
-        }
-      ]
     }
   ]
 }
