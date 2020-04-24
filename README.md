@@ -33,7 +33,7 @@ Para gerar a documentação, rode `yarn docz dev`
 
 ## Testes
 
-Para rodar os testes rode `yarn dev`
+Para rodar os testes rode `yarn test`
 
 ## 💚 Aproveite 💚
 
