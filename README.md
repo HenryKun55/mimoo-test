@@ -27,7 +27,15 @@ Esse teste é o desafio de Front-end Developer
 5. Rode `yarn` para instalar as dependências do projeto;
 6. Rode `yarn dev` para iniciar a aplicação.
 
-### 💚 Aproveite 💚
+## Documentação (docz)
+
+Para gerar a documentação, rode `yarn docz dev`
+
+## Testes
+
+Para rodar os testes rode `yarn dev`
+
+## 💚 Aproveite 💚
 
 ## License
 
