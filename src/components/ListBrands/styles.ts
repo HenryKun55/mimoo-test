@@ -2,20 +2,23 @@ import styled from 'styled-components'
 import { FiMapPin } from 'react-icons/fi'
 import { colors } from '../../styles'
 
-export const Container = styled.div``
+export const Container = styled.div`
+  margin-top: 60px;
+`
 
 export const TitleContainer = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 `
 
 export const Icon = styled(FiMapPin)``
 
 export const Title = styled.span`
-  color: ${colors.greyLight};
-  margin-left: 10px;
+  color: ${colors.greyLight2};
+  margin-left: 5px;
+  font-size: 12px;
 `
 
 export const BrandContainer = styled.div``

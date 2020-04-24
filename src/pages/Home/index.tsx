@@ -21,21 +21,31 @@ import {
 } from './styles'
 import { IGetProducts } from '../../services/product.service'
 
+import User from '../../types/User'
+
 const Home: React.FC = () => {
-  const [usename, setUsername] = useState('')
+  const [user, setUser] = useState<User>({ name: '', points: 100 })
   const dispatch = useDispatch()
   const history = useHistory()
 
   const tabs = useSelector(getTabsFromReduxState)
+  const points = useSelector(getPoints)
 
   useEffect(() => {
     (async () => {
       const name = await getName()
-      setUsername(name !== null ? name : '')
+      setUser({
+        name: name !== null ? name : '',
+        points
+      })
       
       dispatch(getProductsRequest())
     })()
   }, [])
+
+  function getPoints({ auth }: ApplicationState) {
+    return auth.data.points
+  }
 
   function getTabsFromReduxState(state: ApplicationState) {
     return state.products.data.map((item: IGetProducts) => ({
@@ -64,14 +74,14 @@ const Home: React.FC = () => {
   return (
     <>
       <Container>
-        <Title>Olá {formattedName(usename.trim().split(' ')[0])}!</Title>
+        <Title>Olá {formattedName(user.name.trim().split(' ')[0])}!</Title>
         <Subtitle>Adicione mais produtos à sua lista</Subtitle>
         <Subtitle>e ganhe pontos!</Subtitle>
         <ContainerPoints>
           <TiStarFullOutline color={colors.brown} size={18}/>
           <TextPoint>Pontos</TextPoint>
         </ContainerPoints>
-        <TextPointValue>100</TextPointValue>
+        <TextPointValue>{user.points}</TextPointValue>
       </Container>
 
       <Tab tabs={tabs} onChange={handleTabChange}/>

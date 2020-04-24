@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import { AppBar, Typography, Box } from '@material-ui/core'
+import { AppBar, Typography } from '@material-ui/core'
 
-import { useStyles, Tabs, Tab as CustomTab, Container } from './styles'
+import { useStyles, Tabs, Tab as CustomTab, Container, Box } from './styles'
 
 export interface Props {
   tabs: TabProps[];

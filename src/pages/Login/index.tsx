@@ -10,13 +10,14 @@ import * as AuthActions from '../../store/ducks/auth/actions'
 
 const Login: React.FC = () => {
   const [name, setName] = useState('')
+  const points = 100
 
   const history = useHistory()
   const dispatch = useDispatch()
 
   function handleContinue() {
     if (name.length > 0) {
-      dispatch(AuthActions.storeRequest({ name }))
+      dispatch(AuthActions.storeRequest({ name, points }))
       history.push('/home')
     }
   }

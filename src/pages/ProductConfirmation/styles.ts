@@ -48,6 +48,7 @@ export const ProductName = styled.h1`
 
 export const Image = styled.img`
   object-fit: contain;
+  width: 100%;
 `
 
 export const CongratulationsText = styled.h3`

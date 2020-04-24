@@ -1,10 +1,11 @@
 import styled from 'styled-components'
 import { colors } from '../../styles'
-import { AiFillPlusCircle } from 'react-icons/ai'
+import { TiStarFullOutline } from 'react-icons/ti'
 import { Tab as TabC } from '../../components'
 
 export const Container = styled.div`
   padding: 30px;
+  padding-bottom: 0px;
 `
 
 export const Title = styled.h1`
@@ -31,7 +32,7 @@ export const ContainerPoints = styled.div`
 export const TextPoint = styled.span`
   font-size: 18px;
   color: ${colors.brown};
-  font-weight: 300;
+  font-weight: 400;
   margin-left: 3px;
 `
 
@@ -59,3 +60,4 @@ export const PlusButton = styled.div`
 export const Tab = styled(TabC)`
   padding: 0 30px;
 `
+export const Star = styled(TiStarFullOutline)``

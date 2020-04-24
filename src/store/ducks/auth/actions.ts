@@ -7,3 +7,6 @@ export const storeRequest = (user: User) =>
 
 export const storeSuccess = (user: User) =>
   action(AuthTypes.STORE_SUCCESS, { user })
+
+export const setPoints = (points: number) =>
+  action(AuthTypes.SET_POINTS, { points })
