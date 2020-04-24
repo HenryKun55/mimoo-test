@@ -3,7 +3,6 @@ import { FiMapPin } from 'react-icons/fi'
 import { colors } from '../../styles'
 
 export const Container = styled.div`
-  margin-top: 60px;
 `
 
 export const TitleContainer = styled.div`

@@ -15,6 +15,9 @@ import {
 import { colors } from '../../styles'
 
 export interface ListBrandProps {
+  /**
+   * Set this to change colors of background
+   */
   background?: string;
   data: Brand[];
 }

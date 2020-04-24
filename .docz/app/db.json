@@ -2,13 +2,21 @@
   "config": {
     "title": "Mimoo",
     "description": "My awesome app using docz",
-    "menu": [],
+    "menu": [
+      "Getting Started"
+    ],
     "version": "0.1.0",
     "repository": null,
     "native": false,
     "themeConfig": {},
     "separator": "-",
-    "typescript": true
+    "typescript": true,
+    "files": [
+      "**/*.mdx"
+    ],
+    "ignore": [
+      "README.md"
+    ]
   },
   "entries": [
     {
@@ -87,6 +95,52 @@
           }
         ]
       }
+    },
+    {
+      "key": "src/components/ListBrands/ListBrands.mdx",
+      "value": {
+        "menu": "Components",
+        "name": "ListBrands",
+        "route": "/components/ListBrands",
+        "id": "271b5b9994f0a08cd75b6a0616645c82",
+        "filepath": "src/components/ListBrands/ListBrands.mdx",
+        "fullpath": "/home/henry/Documentos/WorkSpace/mimoo/src/components/ListBrands/ListBrands.mdx",
+        "link": "",
+        "hidden": false,
+        "slug": "src-components-list-brands-list-brands",
+        "headings": [
+          {
+            "slug": "listbrands",
+            "depth": 1,
+            "value": "ListBrands"
+          },
+          {
+            "slug": "usage",
+            "depth": 2,
+            "value": "Usage"
+          },
+          {
+            "slug": "props",
+            "depth": 2,
+            "value": "Props"
+          }
+        ]
+      }
+    },
+    {
+      "key": "src/components/Tab/Tab.mdx",
+      "value": {
+        "menu": "Components",
+        "name": "Tab",
+        "route": "components/tab",
+        "id": "71f0c5b5ef71fde95d57028f11281824",
+        "filepath": "src/components/Tab/Tab.mdx",
+        "fullpath": "/home/henry/Documentos/WorkSpace/mimoo/src/components/Tab/Tab.mdx",
+        "link": "",
+        "hidden": false,
+        "slug": "src-components-tab-tab",
+        "headings": []
+      }
     }
   ],
   "props": [
@@ -135,6 +189,15 @@
               "required": true,
               "type": {
                 "name": "TabProps[]"
+              }
+            },
+            "initialValue": {
+              "defaultValue": null,
+              "description": "",
+              "name": "initialValue",
+              "required": false,
+              "type": {
+                "name": "number | undefined"
               }
             },
             "onChange": {
@@ -605,131 +668,11 @@
       "value": []
     },
     {
-      "key": "src/types/Brand.ts",
-      "value": []
-    },
-    {
       "key": "src/types/Product.ts",
       "value": []
     },
     {
       "key": "src/types/User.ts",
-      "value": []
-    },
-    {
-      "key": "src/components/ListBrands/index.tsx",
-      "value": [
-        {
-          "description": "",
-          "displayName": "ListBrands",
-          "methods": [],
-          "props": {
-            "background": {
-              "defaultValue": null,
-              "description": "",
-              "name": "background",
-              "required": false,
-              "type": {
-                "name": "string | undefined"
-              }
-            },
-            "data": {
-              "defaultValue": null,
-              "description": "",
-              "name": "data",
-              "required": true,
-              "type": {
-                "name": "Brand[]"
-              }
-            }
-          }
-        }
-      ]
-    },
-    {
-      "key": "src/components/Tab/index.tsx",
-      "value": [
-        {
-          "description": "",
-          "displayName": "Tab",
-          "methods": [],
-          "props": {
-            "tabs": {
-              "defaultValue": null,
-              "description": "",
-              "name": "tabs",
-              "required": true,
-              "type": {
-                "name": "TabProps[]"
-              }
-            },
-            "onChange": {
-              "defaultValue": null,
-              "description": "",
-              "name": "onChange",
-              "required": false,
-              "type": {
-                "name": "((index: number) => void) | undefined"
-              }
-            }
-          }
-        }
-      ]
-    },
-    {
-      "key": "src/pages/BarCodeReader/index.tsx",
-      "value": [
-        {
-          "description": "",
-          "displayName": "BarCodeReader",
-          "methods": [],
-          "props": {}
-        }
-      ]
-    },
-    {
-      "key": "src/pages/Home/index.tsx",
-      "value": [
-        {
-          "description": "",
-          "displayName": "Home",
-          "methods": [],
-          "props": {}
-        }
-      ]
-    },
-    {
-      "key": "src/pages/Login/index.tsx",
-      "value": [
-        {
-          "description": "",
-          "displayName": "Login",
-          "methods": [],
-          "props": {}
-        }
-      ]
-    },
-    {
-      "key": "src/pages/Splash/index.tsx",
-      "value": [
-        {
-          "description": "",
-          "displayName": "Splash",
-          "methods": [],
-          "props": {}
-        }
-      ]
-    },
-    {
-      "key": "src/store/ducks/index.ts",
-      "value": []
-    },
-    {
-      "key": "src/store/ducks/auth/index.ts",
-      "value": []
-    },
-    {
-      "key": "src/store/ducks/products/index.ts",
       "value": []
     },
     {
@@ -3125,6 +3068,146 @@
               "required": false,
               "type": {
                 "name": "((event: TransitionEvent<HTMLButtonElement>) => void) | undefined"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/components/Tab/index.tsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Tab",
+          "methods": [],
+          "props": {
+            "tabs": {
+              "defaultValue": null,
+              "description": "",
+              "name": "tabs",
+              "required": true,
+              "type": {
+                "name": "TabProps[]"
+              }
+            },
+            "initialValue": {
+              "defaultValue": null,
+              "description": "",
+              "name": "initialValue",
+              "required": false,
+              "type": {
+                "name": "number | undefined"
+              }
+            },
+            "onChange": {
+              "defaultValue": null,
+              "description": "",
+              "name": "onChange",
+              "required": false,
+              "type": {
+                "name": "((index: number) => void) | undefined"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/pages/Home/index.tsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Home",
+          "methods": [],
+          "props": {}
+        }
+      ]
+    },
+    {
+      "key": "src/pages/Login/index.tsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Login",
+          "methods": [],
+          "props": {}
+        }
+      ]
+    },
+    {
+      "key": "src/pages/ProductConfirmation/index.tsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "ProductConfirmation",
+          "methods": [],
+          "props": {}
+        }
+      ]
+    },
+    {
+      "key": "src/pages/Scan/index.tsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Scan",
+          "methods": [],
+          "props": {}
+        }
+      ]
+    },
+    {
+      "key": "src/pages/Splash/index.tsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Splash",
+          "methods": [],
+          "props": {}
+        }
+      ]
+    },
+    {
+      "key": "src/store/ducks/index.ts",
+      "value": []
+    },
+    {
+      "key": "src/store/ducks/auth/index.ts",
+      "value": []
+    },
+    {
+      "key": "src/store/ducks/products/index.ts",
+      "value": []
+    },
+    {
+      "key": "src/types/Brand.ts",
+      "value": []
+    },
+    {
+      "key": "src/components/ListBrands/index.tsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "ListBrands",
+          "methods": [],
+          "props": {
+            "background": {
+              "defaultValue": null,
+              "description": "Set this to change colors of background",
+              "name": "background",
+              "required": false,
+              "type": {
+                "name": "string | undefined"
+              }
+            },
+            "data": {
+              "defaultValue": null,
+              "description": "",
+              "name": "data",
+              "required": true,
+              "type": {
+                "name": "Brand[]"
               }
             }
           }

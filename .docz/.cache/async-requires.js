@@ -5,6 +5,7 @@ exports.components = {
   "component---cache-dev-404-page-js": () => import("./dev-404-page.js" /* webpackChunkName: "component---cache-dev-404-page-js" */),
   "component---readme-md": () => import("./../../README.md" /* webpackChunkName: "component---readme-md" */),
   "component---src-components-button-button-mdx": () => import("./../../src/components/Button/Button.mdx" /* webpackChunkName: "component---src-components-button-button-mdx" */),
+  "component---src-components-list-brands-list-brands-mdx": () => import("./../../src/components/ListBrands/ListBrands.mdx" /* webpackChunkName: "component---src-components-list-brands-list-brands-mdx" */),
   "component---src-index-mdx": () => import("./../../src/index.mdx" /* webpackChunkName: "component---src-index-mdx" */),
   "component---src-pages-404-js": () => import("./../src/pages/404.js" /* webpackChunkName: "component---src-pages-404-js" */)
 }
