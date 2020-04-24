@@ -4,12 +4,14 @@ import { useDispatch, useSelector } from 'react-redux'
 import {
   Container,
   Header,
+  Center,
   Footer,
   Title,
   Image,
   ProductName,
   ContinueText,
   CongratulationsText,
+  ContainerButton,
   ContinueButton
 } from './styles'
 
@@ -35,12 +37,16 @@ const ProductConfirmation: React.FC = () => {
         <Title>Identificamos <br /> que você consome</Title>
         <ProductName>{product?.name}</ProductName>
       </Header>
-      <Image src={product?.image}/>
+      <Center>
+        <Image src={product?.image}/>
+      </Center>
       <Footer>
         <CongratulationsText>Parabéns <br /> Você ganhou 100 pontos!</CongratulationsText>
         <ContinueText>Continue para ganhar ainda <br /> mais pontos</ContinueText>
       </Footer>
-      <ContinueButton onClick={handleContinue}></ContinueButton>
+      <ContainerButton>
+        <ContinueButton variant="secondary" onClick={handleContinue}>Salvar</ContinueButton>
+      </ContainerButton>
     </Container>
   )
 }

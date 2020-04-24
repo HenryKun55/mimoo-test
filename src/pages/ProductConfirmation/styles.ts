@@ -7,19 +7,26 @@ export const Container = styled.div`
   flex-direction: column;
   background-color: ${colors.yellow};
   text-align: center;
-  height: 100vh;
+  height: 100%;
 `;
 
 export const Header = styled.div`
-  flex: 1;
+  height: 25%;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
 `
 
-export const Footer = styled.div`
+export const Center = styled.div`
+  display: flex;
   flex: 1;
+  justify-content: center;
+  height: 40%;
+`
+
+export const Footer = styled.div`
+  height: 25%;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -41,7 +48,6 @@ export const ProductName = styled.h1`
 
 export const Image = styled.img`
   object-fit: contain;
-  height: 40%;
 `
 
 export const CongratulationsText = styled.h3`
@@ -57,6 +63,9 @@ export const ContinueText = styled.h3`
   font-weight: 300;
 `;
 
-export const ContinueButton = styled(Button)`
+export const ContainerButton = styled.div``
 
+export const ContinueButton = styled(Button)`
+  width: 100%;
+  height: 47px;
 `
